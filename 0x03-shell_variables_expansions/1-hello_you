@@ -1,0 +1,9 @@
+import os
+
+def greet_user():
+    user = os.getlogin()
+    print(f"Hello {user}!")
+
+if __name__ == "__main__":
+    greet_user()
+
