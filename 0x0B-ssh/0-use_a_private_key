@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+# Usage: ./connect_school.sh <server_ip_or_hostname>
+
+# Check for argument
+if [ -z "$1" ]; then
+  echo "Usage: $0 <server_ip_or_hostname>"
+  exit 1
+fi
+
+# Connect using ssh with single-character flags only
+# -i: identity file
+# -o: option (used here to specify user)
+ssh -i ~/.ssh/school -oUser=ubuntu "$1"
+
